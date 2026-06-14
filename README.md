@@ -182,42 +182,19 @@ SERPAPI_KEY=your_serpapi_key_here
 CALENDARIFIC_API_KEY=your_calendarific_api_key_here
 ```
 
-### 5. Email Service Setup (Optional)
-
-For sending reports via email using Resend:
-
-1. **Install Node.js dependencies** (in the Backend directory):
-
-```bash
-npm install resend cors body-parser dotenv
-```
-
-2. **Configure Resend in your `.env` file**:
-
-```env
-# Resend Email Configuration
-RESEND_API_KEY=your_resend_api_key_here
-NEXT_PUBLIC_FROM_EMAIL=GovNexus AI <noreply@sevi.club>
-EMAIL_SERVICE_PORT=5001
-```
-
-Get your Resend API key from [https://resend.com](https://resend.com)
-
-3. **Run the email service**:
-
-```bash
-node email_service.js
-```
-
-The email service runs on `http://localhost:5001` and uses Resend for reliable email delivery with automatic retry handling and detailed delivery tracking.
-
-### 6. Run the Flask Server
+### 5. Run the Flask Server
 
 ```bash
 python app.py
 ```
 
 The server starts on `http://localhost:5000`
+
+---
+
+## 📧 Email & Notifications
+
+**Note:** Email delivery is handled directly in the Inventory Management Next.js project via Resend API integration. The Backend focuses on ML training and inventory optimization. See the [Inventory Management README](../Inventory%20Management/README.md) for email configuration details.
 
 ---
 
